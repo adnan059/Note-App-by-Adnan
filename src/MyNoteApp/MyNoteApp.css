@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 215, 166);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#root {
+  width: 600px;
+  height: 90vh;
+
+  position: relative;
+}
+
+.app {
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  margin: auto auto;
+  display: block;
+  border-radius: 25px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Note home page */
+.noteHeader {
+  background-color: rgb(2, 64, 114);
+  height: 12%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.noteHeader h1 {
+  width: 50%;
+  font-size: 40px;
+  color: goldenrod;
+}
+
+.searchBar {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.noteHeader.res {
+  justify-content: center;
+}
+.noteHeader.res .searchBar {
+  justify-content: center;
+}
+.searcInput,
+.searchBtn {
+  display: block;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  color: bisque;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.searchBtn {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.noteBody {
+  padding: 25px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: rgb(110, 110, 110);
+  gap: 20px;
+}
+
+.singleNote {
+  background-color: rgb(10, 80, 57);
+  padding: 15px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.singleNote:nth-child(3n) {
+  flex-grow: 1;
+}
+.singleNote:nth-child(4n) {
+  flex-grow: 2;
+}
+
+.singleNote:nth-child(6n) {
+  flex-grow: 2;
+}
+
+.singleNote h2 {
+  text-align: center;
+  padding: 5px 0;
+  color: goldenrod;
+}
+
+.singleNote p {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: bisque;
+}
+
+/* Make a note page */
+
+.makeANote {
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  color: aliceblue;
+  padding: 15px;
+}
+
+.makeNoteHead {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(10, 80, 57);
+}
+
+.makeNoteIcon {
+  font-size: 40px;
+  color: goldenrod;
+  cursor: pointer;
+}
+
+.makeNoteHead button {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+.makeNoteForm {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.makeNoteForm input,
+.makeNoteForm textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.makeNoteForm input:focus,
+.makeNoteForm textarea:focus {
+  background: transparent;
+  outline: none;
+}
+
+.makeNoteForm input {
+  font-size: 30px;
+}
+.makeNoteForm textarea {
+  font-size: 20px;
+}
+
+.addBtn {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 9;
+  vertical-align: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .noteHeader {
+    height: 12%;
+  }
+
+  .noteHeader .searchBar {
+    justify-content: flex-end;
+  }
+
+  .noteHeader h1 {
+    font-size: 30px;
+  }
+
+  .searchBtn,
+  .searchInput {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .noteHeader.res {
+    display: flex;
+    justify-content: center;
+  }
+  .noteHeader.res .searchBar {
+    justify-content: center;
+  }
+
+  .singleNote:nth-child(1n) {
+    flex-grow: 1;
+  }
+
+  .singleNote h2 {
+    font-size: 18px;
+  }
+
+  .singleNote p {
+    font-size: 12px;
+  }
+
+  .addBtn {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .makeNoteIcon {
+    font-size: 24px;
+  }
+  .makeNoteHead {
+    height: 8%;
+  }
+  .makeNoteHead button {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .makeNoteForm input {
+    font-size: 24px;
+  }
+
+  .makeNoteForm textarea {
+    font-size: 18px;
+  }
+
+  .addBtn {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .noteHeader h1 {
+    font-size: 26px;
+  }
+
+  .makeNoteHead {
+    height: 5%;
+  }
+
+  .makeNoteHead button {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .makeNoteForm input {
+    font-size: 20px;
+  }
+
+  .makeNoteForm textarea {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .noteHeader h1 {
+    font-size: 22px;
+  }
+  .singleNote h2 {
+    font-size: 17px;
+  }
+}
