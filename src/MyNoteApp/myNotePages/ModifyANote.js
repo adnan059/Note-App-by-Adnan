@@ -25,6 +25,8 @@ const ModifyANote = ({ notes, setNotes }) => {
       setNotes([newNote, ...restNotes]);
 
       navigate("/");
+    } else {
+      alert("You must fill in both fields");
     }
   };
 

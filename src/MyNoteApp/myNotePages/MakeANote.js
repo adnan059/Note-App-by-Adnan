@@ -15,6 +15,8 @@ const MakeANote = ({ setNotes }) => {
       const newNote = { id: uuid(), title, details, moment };
       setNotes((prevNotes) => [newNote, ...prevNotes]);
       navigate("/");
+    } else {
+      alert("You must fill in both fields.");
     }
   };
 

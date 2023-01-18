@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(255, 215, 166);
+  background-color: rgb(119, 119, 119);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -25,7 +25,7 @@ body {
 
 .app {
   width: 100%;
-  background-color: black;
+  background-color: rgb(248, 200, 96);
   height: 100%;
   margin: auto auto;
   display: block;
@@ -38,7 +38,7 @@ body {
 
 /* Note home page */
 .noteHeader {
-  background-color: rgb(2, 64, 114);
+  background-color: rgb(0, 90, 63);
   height: 12%;
   width: 100%;
   display: flex;
@@ -102,7 +102,7 @@ body {
 }
 
 .singleNote {
-  background-color: rgb(10, 80, 57);
+  background-color: rgb(0, 84, 139);
   padding: 15px;
   border-radius: 15px;
   text-decoration: none;
@@ -202,8 +202,8 @@ body {
 
 .addBtn {
   position: absolute;
-  top: 90%;
-  left: 90%;
+  top: 80%;
+  left: 80%;
   font-size: 40px;
   cursor: pointer;
   z-index: 9;
@@ -265,7 +265,7 @@ body {
   }
 
   .addBtn {
-    top: 90%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
   }
