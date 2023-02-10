@@ -3,7 +3,7 @@
 <p style="font-size: 16px" >This app can be used to make, edit and delete notes. There is also a search bar to find the note you are looking for.</p> <br/>
 
 <h2 style="color:dodgerblue">Live Demo :</h2>
-<a style="font-size:18px" href="https://noteappbyadnan.netlify.app/" target="_blank">Note App</a>
+<a style="font-size:18px" href="https://noteappbyadnan.netlify.app/" target="_blank" rel="noreferrer">Note App</a>
 
 <br/>
 <h2 style="color:dodgerblue">Tools & Technologies Used:</h2>
